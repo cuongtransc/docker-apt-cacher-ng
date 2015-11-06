@@ -1,0 +1,22 @@
+# apt-cacher-ng
+#
+# Run:
+#   docker run -it --rm -e http_proxy=http://dockerhost:3142/ debian bash
+# or:
+#   echo 'Acquire::http::Proxy "http://172.17.42.1:3142/";' >> /etc/apt/apt.conf.d/01proxy
+
+aptcacherng:
+    image: tranhuucuong91/apt-cacher-ng:0.1
+    ports:
+        - "3142:3142"
+    volumes:
+        - ./acng-data/:/var/cache/apt-cacher-ng/
+    hostname: aptcacherng
+    domainname: coclab.lan
+    cpu_shares: 512             # 0.5 CPU
+    mem_limit: 536870912        # 512 MB RAM
+    #privileged: true
+    restart: always
+    #stdin_open: true
+    #tty: true
+
