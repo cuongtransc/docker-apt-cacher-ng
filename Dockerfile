@@ -7,9 +7,9 @@
 #   docker run -it --rm -e http_proxy=http://dockerhost:3142/ debian bash
 #
 # Ex:
-#   docker run -it --rm -e http_proxy=http://172.17.42.1:3142/ ubuntu bash
+#   docker run -it --rm -e http_proxy=http://172.17.0.1:3142/ ubuntu bash
 
-FROM debian:jessie
+FROM ubuntu:16.04
 MAINTAINER Tran Huu Cuong "tranhuucuong91@gmail.com"
 
 # using apt-cacher-ng proxy for caching deb package
