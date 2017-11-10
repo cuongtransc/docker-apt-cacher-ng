@@ -1,7 +1,7 @@
 # Author: Tran Huu Cuong
 #
-# Build: docker build -t tranhuucuong91/apt-cacher-ng .
-# Run: docker run -d -p 3142:3142 --name apt-cacher-run tranhuucuong91/apt-cacher-ng
+# Build: docker build -t cuongtransc/apt-cacher-ng .
+# Run: docker run -d -p 3142:3142 --name apt-cacher-run cuongtransc/apt-cacher-ng
 #
 # and then you can run containers with:
 #   docker run -it --rm -e http_proxy=http://dockerhost:3142/ debian bash
@@ -10,7 +10,7 @@
 #   docker run -it --rm -e http_proxy=http://172.17.0.1:3142/ ubuntu bash
 
 FROM ubuntu:16.04
-MAINTAINER Tran Huu Cuong "tranhuucuong91@gmail.com"
+MAINTAINER Tran Huu Cuong "cuongtransc@gmail.com"
 
 # using apt-cacher-ng proxy for caching deb package
 # RUN echo 'Acquire::http::Proxy "http://172.17.42.1:3142/";' > /etc/apt/apt.conf.d/01proxy

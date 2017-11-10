@@ -1,6 +1,6 @@
 PRIVATE_REGISTRY_URL=registry.coclab.lan:5000
 
-DOCKER_IMAGE=tranhuucuong91/apt-cacher-ng
+DOCKER_IMAGE=cuongtransc/apt-cacher-ng
 VERSION=0.7
 
 all: build
